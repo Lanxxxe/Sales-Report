@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="ht tps://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+    <title>Sales Calculator App</title>
+</head>
+
+
+<body >
+    <div class="content-container bg-zinc-900 h-screen">
+        <div class="flex justify-center items-center gap-3.5 h-screen">
+            <div class="h-3/6 w-2/5 bg-zinc-800 rounded-md shadow-md p-5 text-slate-200">
+                <h1 class="text-2xl">Enter Information Needed</h1>
+
+                <div class="forms">
+                    <div class="mt-8 grid grid-cols-2 gap-3">
+                        <input class="rounded-md p-2 text-gray-900" type="number" placeholder="(Php)" id="pondo" required>
+                        <label for="pondo">Pondo Gaming Sales (Total Cash)</label>
+                        
+                        <input class="rounded-md p-2 text-gray-900 " type="number" placeholder="(Php)" id="canteen" required>
+                        <label for="canteen">Canteen Sales (Cash Item)</label>
+                        
+                        <input class="rounded-md p-2 text-gray-900 " type="number" placeholder="(Php)" id="membership" required>
+                        <label for="membership">New Membership Total Amount (Card Cost)</label>
+                        
+                        <input class="rounded-md p-2 text-gray-900 " type="number" placeholder="(Php)" id="salary" required>
+                        <label for="salary">Salary</label>
+                        
+                        <input class="rounded-md p-2 text-gray-900 " type="number" placeholder="(Php)" id="expenses" required>
+                        <label for="expenses    ">Total Expenses</label>
+                    </div>
+                    <button class="block mt-8 bg-sky-500 hover:bg-sky-600 p-2 rounded-md w-60" role="button" id="calculate-button">Calculate</button>
+                </div>
+
+            </div>
+            <div class="h-3/6 w-2/5  bg-zinc-800 rounded-md shadow-md p-5 text-slate-200">
+                <h1 class="text-2xl">Breakdown</h1>
+                <div class="flex flex-col gap-4 mt-10">
+                    <p>Pondo Gaming Sales: P <span id="pondo-sales"></span></p>
+                    <p>Topup Sales: P <span id="topup-sales"></span></p>
+                    <p>Newly Availed Membership: P <span id="avail-membership"></span></p>
+                    <p>Canteen Sales: P <span id="canteen-sales"></span></p>
+                    <p>Total Gaming Sales (to be deposit): P <span id="gaming-sales"></span></p>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+    
+    
+    
+    <script src="./script.js"></script>
+</body>
+</html>
